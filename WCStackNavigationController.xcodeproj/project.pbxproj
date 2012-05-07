@@ -1,0 +1,264 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A9A8EBC81558848400D32F56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A8EBC71558848400D32F56 /* UIKit.framework */; };
+		A9A8EBCA1558848400D32F56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A8EBC91558848400D32F56 /* Foundation.framework */; };
+		A9A8EBCC1558848400D32F56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A8EBCB1558848400D32F56 /* CoreGraphics.framework */; };
+		A9A8EBD21558848400D32F56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9A8EBD01558848400D32F56 /* InfoPlist.strings */; };
+		A9A8EBD41558848400D32F56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBD31558848400D32F56 /* main.m */; };
+		A9A8EBD81558848400D32F56 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBD71558848400D32F56 /* WCAppDelegate.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A9A8EBC31558848400D32F56 /* WCStackNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WCStackNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9A8EBC71558848400D32F56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A9A8EBC91558848400D32F56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		A9A8EBCB1558848400D32F56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A9A8EBCF1558848400D32F56 /* WCStackNavigationController-Info.plist */ = {isa = PBXFileReference; path = "WCStackNavigationController-Info.plist"; sourceTree = "<group>"; };
+		A9A8EBD11558848400D32F56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		A9A8EBD31558848400D32F56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A9A8EBD51558848400D32F56 /* WCStackNavigationController-Prefix.pch */ = {isa = PBXFileReference; path = "WCStackNavigationController-Prefix.pch"; sourceTree = "<group>"; };
+		A9A8EBD61558848400D32F56 /* WCAppDelegate.h */ = {isa = PBXFileReference; path = WCAppDelegate.h; sourceTree = "<group>"; };
+		A9A8EBD71558848400D32F56 /* WCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A9A8EBC01558848400D32F56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A8EBC81558848400D32F56 /* UIKit.framework in Frameworks */,
+				A9A8EBCA1558848400D32F56 /* Foundation.framework in Frameworks */,
+				A9A8EBCC1558848400D32F56 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A9A8EBB81558848400D32F56 = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBCD1558848400D32F56 /* WCStackNavigationController */,
+				A9A8EBC61558848400D32F56 /* Frameworks */,
+				A9A8EBC41558848400D32F56 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A9A8EBC41558848400D32F56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBC31558848400D32F56 /* WCStackNavigationController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A9A8EBC61558848400D32F56 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBC71558848400D32F56 /* UIKit.framework */,
+				A9A8EBC91558848400D32F56 /* Foundation.framework */,
+				A9A8EBCB1558848400D32F56 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A9A8EBCD1558848400D32F56 /* WCStackNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBD61558848400D32F56 /* WCAppDelegate.h */,
+				A9A8EBD71558848400D32F56 /* WCAppDelegate.m */,
+				A9A8EBCE1558848400D32F56 /* Supporting Files */,
+			);
+			path = WCStackNavigationController;
+			sourceTree = "<group>";
+		};
+		A9A8EBCE1558848400D32F56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBCF1558848400D32F56 /* WCStackNavigationController-Info.plist */,
+				A9A8EBD01558848400D32F56 /* InfoPlist.strings */,
+				A9A8EBD31558848400D32F56 /* main.m */,
+				A9A8EBD51558848400D32F56 /* WCStackNavigationController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A9A8EBC21558848400D32F56 /* WCStackNavigationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A9A8EBDB1558848400D32F56 /* Build configuration list for PBXNativeTarget "WCStackNavigationController" */;
+			buildPhases = (
+				A9A8EBBF1558848400D32F56 /* Sources */,
+				A9A8EBC01558848400D32F56 /* Frameworks */,
+				A9A8EBC11558848400D32F56 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WCStackNavigationController;
+			productName = WCStackNavigationController;
+			productReference = A9A8EBC31558848400D32F56 /* WCStackNavigationController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A9A8EBBA1558848400D32F56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WC;
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = A9A8EBBD1558848400D32F56 /* Build configuration list for PBXProject "WCStackNavigationController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A9A8EBB81558848400D32F56;
+			productRefGroup = A9A8EBC41558848400D32F56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A9A8EBC21558848400D32F56 /* WCStackNavigationController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A9A8EBC11558848400D32F56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A8EBD21558848400D32F56 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A9A8EBBF1558848400D32F56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A9A8EBD41558848400D32F56 /* main.m in Sources */,
+				A9A8EBD81558848400D32F56 /* WCAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A9A8EBD01558848400D32F56 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A9A8EBD11558848400D32F56 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A9A8EBD91558848400D32F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A9A8EBDA1558848400D32F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A9A8EBDC1558848400D32F56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCStackNavigationController/WCStackNavigationController-Prefix.pch";
+				INFOPLIST_FILE = "WCStackNavigationController/WCStackNavigationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		A9A8EBDD1558848400D32F56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WCStackNavigationController/WCStackNavigationController-Prefix.pch";
+				INFOPLIST_FILE = "WCStackNavigationController/WCStackNavigationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A9A8EBBD1558848400D32F56 /* Build configuration list for PBXProject "WCStackNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9A8EBD91558848400D32F56 /* Debug */,
+				A9A8EBDA1558848400D32F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A9A8EBDB1558848400D32F56 /* Build configuration list for PBXNativeTarget "WCStackNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A9A8EBDC1558848400D32F56 /* Debug */,
+				A9A8EBDD1558848400D32F56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A9A8EBBA1558848400D32F56 /* Project object */;
+}
