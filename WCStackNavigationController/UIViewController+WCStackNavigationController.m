@@ -7,7 +7,7 @@
 //
 
 #import "UIViewController+WCStackNavigationController.h"
-#import <objc/objc-runtime.h>
+#import <objc/runtime.h>
 
 @implementation UIViewController (WCStackNavigationController)
 @dynamic stackTitle;
