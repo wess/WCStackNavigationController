@@ -210,6 +210,7 @@
         [viewController removeFromParentViewController];
     }
     
+    [viewController willMoveToParentViewController:nil];
     [viewController removeFromParentViewController];
     [_backNavigation reloadData];
 }
