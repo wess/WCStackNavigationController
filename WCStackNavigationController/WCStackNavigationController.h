@@ -11,11 +11,9 @@
 @protocol WCStackNavigationDelegate;
 @interface WCStackNavigationController : UIViewController<UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) id<WCStackNavigationDelegate>delegate;
-@property (strong, nonatomic) UIViewController  *rootViewController;
 @property (strong, nonatomic) UIBarButtonItem   *stackToggleButtonItem;
 @property (strong, nonatomic) UINavigationBar   *navigationBar;
 
-//- (id)initWithRootViewController:(UIViewController *)rootViewController;
 - (void)pushViewController:(UIViewController *)viewController;
 - (void)popViewController:(UIViewController *)viewController;
 - (void)setNavigationBarHidden:(BOOL)shouldHide;

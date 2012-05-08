@@ -28,7 +28,6 @@
 
 @implementation WCStackNavigationController
 @synthesize delegate                = _delegate;
-@synthesize rootViewController      = _rootViewController;
 @synthesize stackToggleButtonItem   = _stackToggleButtonItem;
 @synthesize navigationBar           = _navigationBar;
 
@@ -80,8 +79,17 @@
     [_topView addSubview:_navigationBar];
     
     
-    CGRect currentViewFrame = _topView.frame;
+    CGPathRef path = CGPathCreateWithRect(_topView.bounds, NULL);
     
+    _topView.layer.shadowPath       = path;
+    _topView.layer.shadowColor      = [UIColor blackColor].CGColor;
+    _topView.layer.shadowOffset     = CGSizeMake(-2.0f, 0.0f);
+    _topView.layer.shadowOpacity    = 0.4f;
+    _topView.layer.shadowRadius     = 4.0f;
+    
+    CGPathRelease(path);
+    
+    CGRect currentViewFrame = _topView.frame;
     if(!_navigationBar.hidden)
     {
         currentViewFrame.size.height    -= _navigationBar.frame.size.height;
