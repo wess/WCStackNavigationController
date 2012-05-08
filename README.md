@@ -72,6 +72,11 @@ If you want to customize the look of your our stack nav controller, you can. If 
 
 ---
 
+#### Screenshot:
+![ScreenShot](https://github.com/wess/WCStackNavigationController/raw/master/screenshot.png)
+
+---
+
 As usual, if you have any suggestions, contributions, etc.. Feel free to message me here or hit me up on twitter (@wesscope).
 
 Thanks,
