@@ -13,6 +13,11 @@
 		A9A8EBD21558848400D32F56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A9A8EBD01558848400D32F56 /* InfoPlist.strings */; };
 		A9A8EBD41558848400D32F56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBD31558848400D32F56 /* main.m */; };
 		A9A8EBD81558848400D32F56 /* WCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBD71558848400D32F56 /* WCAppDelegate.m */; };
+		A9A8EBE2155951D700D32F56 /* 84-lightbulb.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A8EBE0155951D700D32F56 /* 84-lightbulb.png */; };
+		A9A8EBE3155951D700D32F56 /* 84-lightbulb@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A9A8EBE1155951D700D32F56 /* 84-lightbulb@2x.png */; };
+		A9A8EBE81559527400D32F56 /* WCStackNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBE7155951EE00D32F56 /* WCStackNavigationController.m */; };
+		A9A8EBE91559527400D32F56 /* UIViewController+WCStackNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = A9A8EBE5155951E600D32F56 /* UIViewController+WCStackNavigationController.m */; };
+		A9A8EBEB155953C600D32F56 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9A8EBEA155953C600D32F56 /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,12 +25,19 @@
 		A9A8EBC71558848400D32F56 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A9A8EBC91558848400D32F56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A9A8EBCB1558848400D32F56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		A9A8EBCF1558848400D32F56 /* WCStackNavigationController-Info.plist */ = {isa = PBXFileReference; path = "WCStackNavigationController-Info.plist"; sourceTree = "<group>"; };
+		A9A8EBCF1558848400D32F56 /* WCStackNavigationController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WCStackNavigationController-Info.plist"; sourceTree = "<group>"; };
 		A9A8EBD11558848400D32F56 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A9A8EBD31558848400D32F56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A9A8EBD51558848400D32F56 /* WCStackNavigationController-Prefix.pch */ = {isa = PBXFileReference; path = "WCStackNavigationController-Prefix.pch"; sourceTree = "<group>"; };
-		A9A8EBD61558848400D32F56 /* WCAppDelegate.h */ = {isa = PBXFileReference; path = WCAppDelegate.h; sourceTree = "<group>"; };
+		A9A8EBD51558848400D32F56 /* WCStackNavigationController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WCStackNavigationController-Prefix.pch"; sourceTree = "<group>"; };
+		A9A8EBD61558848400D32F56 /* WCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WCAppDelegate.h; sourceTree = "<group>"; };
 		A9A8EBD71558848400D32F56 /* WCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCAppDelegate.m; sourceTree = "<group>"; };
+		A9A8EBE0155951D700D32F56 /* 84-lightbulb.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "84-lightbulb.png"; sourceTree = "<group>"; };
+		A9A8EBE1155951D700D32F56 /* 84-lightbulb@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "84-lightbulb@2x.png"; sourceTree = "<group>"; };
+		A9A8EBE4155951E600D32F56 /* UIViewController+WCStackNavigationController.h */ = {isa = PBXFileReference; path = "UIViewController+WCStackNavigationController.h"; sourceTree = "<group>"; };
+		A9A8EBE5155951E600D32F56 /* UIViewController+WCStackNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+WCStackNavigationController.m"; sourceTree = "<group>"; };
+		A9A8EBE6155951EE00D32F56 /* WCStackNavigationController.h */ = {isa = PBXFileReference; path = WCStackNavigationController.h; sourceTree = "<group>"; };
+		A9A8EBE7155951EE00D32F56 /* WCStackNavigationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WCStackNavigationController.m; sourceTree = "<group>"; };
+		A9A8EBEA155953C600D32F56 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8EBEB155953C600D32F56 /* QuartzCore.framework in Frameworks */,
 				A9A8EBC81558848400D32F56 /* UIKit.framework in Frameworks */,
 				A9A8EBCA1558848400D32F56 /* Foundation.framework in Frameworks */,
 				A9A8EBCC1558848400D32F56 /* CoreGraphics.framework in Frameworks */,
@@ -62,6 +75,7 @@
 		A9A8EBC61558848400D32F56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A9A8EBEA155953C600D32F56 /* QuartzCore.framework */,
 				A9A8EBC71558848400D32F56 /* UIKit.framework */,
 				A9A8EBC91558848400D32F56 /* Foundation.framework */,
 				A9A8EBCB1558848400D32F56 /* CoreGraphics.framework */,
@@ -72,6 +86,7 @@
 		A9A8EBCD1558848400D32F56 /* WCStackNavigationController */ = {
 			isa = PBXGroup;
 			children = (
+				A9A8EBDF155951B700D32F56 /* Classes */,
 				A9A8EBD61558848400D32F56 /* WCAppDelegate.h */,
 				A9A8EBD71558848400D32F56 /* WCAppDelegate.m */,
 				A9A8EBCE1558848400D32F56 /* Supporting Files */,
@@ -82,12 +97,33 @@
 		A9A8EBCE1558848400D32F56 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				A9A8EBE0155951D700D32F56 /* 84-lightbulb.png */,
+				A9A8EBE1155951D700D32F56 /* 84-lightbulb@2x.png */,
 				A9A8EBCF1558848400D32F56 /* WCStackNavigationController-Info.plist */,
 				A9A8EBD01558848400D32F56 /* InfoPlist.strings */,
 				A9A8EBD31558848400D32F56 /* main.m */,
 				A9A8EBD51558848400D32F56 /* WCStackNavigationController-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A9A8EBDE155951B100D32F56 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBE4155951E600D32F56 /* UIViewController+WCStackNavigationController.h */,
+				A9A8EBE5155951E600D32F56 /* UIViewController+WCStackNavigationController.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		A9A8EBDF155951B700D32F56 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A9A8EBE6155951EE00D32F56 /* WCStackNavigationController.h */,
+				A9A8EBE7155951EE00D32F56 /* WCStackNavigationController.m */,
+				A9A8EBDE155951B100D32F56 /* Categories */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -142,6 +178,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A8EBD21558848400D32F56 /* InfoPlist.strings in Resources */,
+				A9A8EBE2155951D700D32F56 /* 84-lightbulb.png in Resources */,
+				A9A8EBE3155951D700D32F56 /* 84-lightbulb@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,6 +190,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A8EBE81559527400D32F56 /* WCStackNavigationController.m in Sources */,
+				A9A8EBE91559527400D32F56 /* UIViewController+WCStackNavigationController.m in Sources */,
 				A9A8EBD41558848400D32F56 /* main.m in Sources */,
 				A9A8EBD81558848400D32F56 /* WCAppDelegate.m in Sources */,
 			);

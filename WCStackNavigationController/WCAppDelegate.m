@@ -7,6 +7,7 @@
 //
 
 #import "WCAppDelegate.h"
+#import "UIViewController+WCStackNavigationController.h"
 
 @implementation WCAppDelegate
 
@@ -15,9 +16,32 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
+
+    WCStackNavigationController *stackNavController = [[WCStackNavigationController alloc] init];
+
+    UIViewController *controllerA       = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    controllerA.stackTitle              = @"Controller A";
+    controllerA.view.backgroundColor    = [UIColor blueColor];
+
+    UIViewController *controllerB       = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    controllerB.stackTitle              = @"Controller B";
+    controllerB.view.backgroundColor    = [UIColor greenColor];
+
+    UIViewController *controllerC       = [[UIViewController alloc] initWithNibName:nil bundle:nil];
+    controllerC.stackTitle              = @"Controller C";
+    controllerC.view.backgroundColor    = [UIColor redColor];
+    
+    
+    controllerB.stackIcon = [UIImage imageNamed:@"84-lightbulb"];
+    
+    [stackNavController pushViewController:controllerA];
+    [stackNavController pushViewController:controllerB];
+    [stackNavController pushViewController:controllerC];
+    
+    self.window.rootViewController = stackNavController;
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+
     return YES;
 }
 
