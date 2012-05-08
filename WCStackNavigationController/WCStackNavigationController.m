@@ -184,6 +184,8 @@
             
             if([self.delegate respondsToSelector:@selector(stackController:didNavigateToViewController:)])
                 [self.delegate stackController:self didNavigateToViewController:_currentViewController];
+            
+            [viewController didMoveToParentViewController:self];
         }
     }];
 }
@@ -191,6 +193,7 @@
 - (void)pushViewController:(UIViewController *)viewController
 {
     [self addChildViewController:viewController];
+    
     [_backNavigation reloadData];
     [self transitionToViewController:viewController];
 }
