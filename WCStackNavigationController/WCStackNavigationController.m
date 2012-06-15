@@ -71,7 +71,7 @@
         _currentView.frame = currentFrame;
     }];
     
-    _isShowingNavigationBar = shouldHide;
+    _isShowingNavigationBar = !shouldHide;
 }
 
 - (void)viewDidLoad
