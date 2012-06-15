@@ -12,6 +12,7 @@
 @implementation UIViewController (WCStackNavigationController)
 @dynamic stackTitle;
 @dynamic stackIcon;
+//@dynamic auxillaryPanel;
 
 - (void)setStackTitle:(NSString *)stackTitle
 {

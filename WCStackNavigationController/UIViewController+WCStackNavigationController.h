@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface UIViewController (WCStackNavigationController)
-@property (copy, nonatomic)     NSString *stackTitle;
-@property (strong, nonatomic)   UIImage *stackIcon;
+@property (copy, nonatomic)     NSString    *stackTitle;
+@property (strong, nonatomic)   UIImage     *stackIcon;
+//@property (strong, nonatomic)   UIView      *auxillaryPanel;
 @end

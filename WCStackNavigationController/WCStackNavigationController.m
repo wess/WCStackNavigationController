@@ -137,7 +137,7 @@
     if([self.delegate respondsToSelector:@selector(stackControllerEnableSwipeForNavigation)])
         canSwipe = [self.delegate stackControllerEnableSwipeForNavigation];
     
-    NSMutableArray *gestures = NEW_MUTABLE_ARRAY;
+    NSMutableArray *gestures = [NSMutableArray array];
     if(canSwipe)
     {
         UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeftToCloseNavigationView:)];

@@ -31,5 +31,5 @@
 - (void)stackController:(WCStackNavigationController *)stackController didNavigateToViewController:(UIViewController *)viewController;
 - (void)stackController:(WCStackNavigationController *)stackController willNavigateFromViewController:(UIViewController *)viewController;
 - (void)stackController:(WCStackNavigationController *)stackController didNavigateFromViewController:(UIViewController *)viewController;
-
+//- (UIView *)stackControllerAuxiliaryPanelView;
 @end
