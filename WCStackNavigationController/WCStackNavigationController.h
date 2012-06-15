@@ -10,9 +10,9 @@
 
 @protocol WCStackNavigationDelegate;
 @interface WCStackNavigationController : UIViewController<UITableViewDataSource, UITableViewDelegate>
-@property (strong, nonatomic) id<WCStackNavigationDelegate>delegate;
-@property (strong, nonatomic) UIBarButtonItem   *stackToggleButtonItem;
-@property (strong, nonatomic) UINavigationBar   *navigationBar;
+@property (strong, nonatomic) id<WCStackNavigationDelegate> delegate;
+@property (strong, nonatomic) UIBarButtonItem               *stackToggleButtonItem;
+@property (strong, nonatomic) UINavigationBar               *navigationBar;
 
 - (void)pushViewController:(UIViewController *)viewController;
 - (void)popViewController:(UIViewController *)viewController;
@@ -26,6 +26,7 @@
 - (BOOL)stackControllerWillCloseNavigationWhenSelected;
 - (CGFloat)stackControllerSlideOffset;
 - (BOOL)stackControllerEnableSwipeForNavigation;
+- (BOOL)stackControllerEnableTapToClose;
 - (void)stackController:(WCStackNavigationController *)stackController willNavigateToViewController:(UIViewController *)viewController;
 - (void)stackController:(WCStackNavigationController *)stackController didNavigateToViewController:(UIViewController *)viewController;
 - (void)stackController:(WCStackNavigationController *)stackController willNavigateFromViewController:(UIViewController *)viewController;

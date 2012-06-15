@@ -13,7 +13,9 @@
 @interface WCStackNavigationController ()
 {
     BOOL _isShowingBackNavigation;
- 
+    BOOL _isShowingNavigationBar;
+    BOOL _draggingMainView;
+    
     UITableView     *_backNavigation;
     UIView          *_topView;
     UIView          *_currentView;
@@ -24,6 +26,7 @@
 - (void)toggleNavigationView:(id)sender;
 - (void)swipeLeftToCloseNavigationView:(UIGestureRecognizer *)gesture;
 - (void)swipeRightToOpenNavigationView:(UIGestureRecognizer *)gesture;
+- (void)tapToCloseNavigationView:(UIGestureRecognizer *)gesture;
 @end
 
 @implementation WCStackNavigationController
@@ -31,9 +34,20 @@
 @synthesize stackToggleButtonItem   = _stackToggleButtonItem;
 @synthesize navigationBar           = _navigationBar;
 
+- (id)init
+{
+    self = [super initWithNibName:nil bundle:nil];
+    if(self)
+    {
+        _isShowingNavigationBar = YES;
+        _draggingMainView       = NO;
+    }
+    return self;
+}
+
 - (void)setNavigationBarHidden:(BOOL)shouldHide
 {
-    [self setNavigationBarHidden:shouldHide animated:NO];
+    [self setNavigationBarHidden:shouldHide animated:shouldHide];
 }
 
 - (void)setNavigationBarHidden:(BOOL)shouldHide animated:(BOOL)animated
@@ -56,6 +70,8 @@
 
         _currentView.frame = currentFrame;
     }];
+    
+    _isShowingNavigationBar = shouldHide;
 }
 
 - (void)viewDidLoad
@@ -65,6 +81,8 @@
     _isShowingBackNavigation = NO;
     
     _navigationBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0.0f, 0.0f, [UIScreen mainScreen].bounds.size.width, 44.0f)];
+    if(!_isShowingNavigationBar)
+        _navigationBar.hidden = YES;
     
     _backNavigation             = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
     _backNavigation.delegate    = self;
@@ -72,10 +90,10 @@
     
     [self.view addSubview:_backNavigation];
     
-    _topView = [[UIView alloc] initWithFrame:self.view.bounds];
+    _topView                 = [[UIView alloc] initWithFrame:self.view.bounds];
     _topView.backgroundColor = [UIColor viewFlipsideBackgroundColor];
+    
     [self.view addSubview:_topView];
-
     [_topView addSubview:_navigationBar];
     
     
@@ -119,6 +137,7 @@
     if([self.delegate respondsToSelector:@selector(stackControllerEnableSwipeForNavigation)])
         canSwipe = [self.delegate stackControllerEnableSwipeForNavigation];
     
+    NSMutableArray *gestures = NEW_MUTABLE_ARRAY;
     if(canSwipe)
     {
         UISwipeGestureRecognizer *leftSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeLeftToCloseNavigationView:)];
@@ -126,9 +145,23 @@
         
         UISwipeGestureRecognizer *rightSwipe = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRightToOpenNavigationView:)];
         rightSwipe.direction = UISwipeGestureRecognizerDirectionRight;
-        
-        self.view.gestureRecognizers = [NSArray arrayWithObjects:leftSwipe, rightSwipe, nil];
+
+        [gestures addObject:leftSwipe];
+        [gestures addObject:rightSwipe];
+//        self.view.gestureRecognizers = [NSArray arrayWithObjects:leftSwipe, rightSwipe, nil];
     }
+    
+    BOOL canTapToClose = NO;
+    if([self.delegate respondsToSelector:@selector(stackControllerEnableTapToClose)])
+        canTapToClose = [self.delegate stackControllerEnableTapToClose];
+    
+    if(canTapToClose)
+    {
+        UITapGestureRecognizer *tapToClose = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseNavigationView:)];
+        [gestures addObject:tapToClose];
+    }
+    
+    self.view.gestureRecognizers = [gestures copy];
 }
 
 #pragma mark - Orientation
@@ -215,6 +248,7 @@
     [_backNavigation reloadData];
 }
 
+#pragma mark - Gestures and User interaction
 - (void)toggleNavigationView:(id)sender
 {
     CGFloat slideOffset = [self.delegate respondsToSelector:@selector(stackControllerSlideOffset)]? [self.delegate stackControllerSlideOffset] : 50.0f;
@@ -230,6 +264,45 @@
     }];
     
 }
+
+//- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    UITouch *touch = [touches anyObject];
+//    
+//    if([[touch view] isEqual:_topView])
+//    {
+//        _draggingMainView = YES;
+//        
+//        [UIView animateWithDuration:0.2f animations:^{
+//            _topView.alpha = 0.4f;
+//        }];
+//    }
+//}
+//
+//- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//
+//    UITouch *touch = [touches anyObject];
+//    if([[touch view] isEqual:_topView])
+//    {
+//        CGPoint location = [touch locationInView:self.view];
+//        if(location.x < 30.0f)
+//            _topView.center = CGPointMake(location.x, _topView.center.y);
+//    }
+//}
+//
+//- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+//{
+//    UITouch *touch = [touches anyObject];
+//    if([[touch view] isEqual:_topView])
+//    {
+//        _draggingMainView = NO;
+//        
+//        [UIView animateWithDuration:0.2f animations:^{
+//            _topView.alpha = 1.0f;
+//        }];
+//    }
+//}
 
 - (void)swipeLeftToCloseNavigationView:(UIGestureRecognizer *)gesture
 {
@@ -247,6 +320,13 @@
     [self toggleNavigationView:nil];
 }
 
+- (void)tapToCloseNavigationView:(UIGestureRecognizer *)gesture
+{
+    if(!_isShowingBackNavigation)
+        return;
+    
+    [self toggleNavigationView:nil];
+}
 
 #pragma mark - UITableView DataSource Methods
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
